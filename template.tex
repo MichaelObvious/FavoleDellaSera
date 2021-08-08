@@ -1,0 +1,57 @@
+\documentclass[a4paper, 12pt, oneside]{article}
+
+%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%
+\usepackage[italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage[hidelinks, bookmarksopen=true, bookmarks=true]{hyperref}
+\usepackage{lettrine}
+\usepackage{microtype}
+\usepackage{titlesec}
+
+%%%%%%%%%%%%%%%% MACROS %%%%%%%%%%%%%%%%
+\newcommand{\booktitle}{\textbf{Favole della sera}}
+
+%%%%%%%%%%%%%%%% PREFERENCES %%%%%%%%%%%%%%%%
+\title{
+	\Huge\booktitle\\
+    {\large\textit{Favole per bambini}}
+}
+\author{} % Michele Palese
+\date{}
+
+%\babelprovide[import]{polytonicgreek}
+%\babelprovide[import]{greek}
+
+\usepackage[lining]{ebgaramond}
+%\setromanfont[BoldFont={Gentium Basic Bold},ItalicFont={Gentium Italic}]{GentiumAlt}
+%\babelfont[polytonicgreek]{rm}{BosporosU}
+%\setmainfont{Ubuntu}
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{\booktitle}
+\cfoot{\thepage}
+
+\renewcommand{\thesection}{}%\Roman{section}}
+\titleformat{\section} % command 
+	[display] % shape
+	{\centering\Large\bfseries} % format
+	{\thesection} % label
+{0.5ex} % sep
+{} % before-code
+[] % after-code
+
+%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%
+\makeindex
+\begin{document}
+	\maketitle
+	\newpage
+	
+	\tableofcontents
+	\newpage
+
+    %{favole}%
+        
+	
+\end{document}
