@@ -1,8 +1,10 @@
+> *Favola lituana*
+
 # Il Sole e la Luna
 
-> *titolo originale* Saulė ir Mėnulis
+> *Titolo originale* Saulė ir Mėnulis
 > 
-> *traduzione a cura di* Michele Palese
+> *Traduzione a cura di* Michele Palese
 
 Tanto tanto tempo fa, quando ancora gli uomini non c'erano, vivevano il Sole e la Luna. Vivevano in uno splendente e luminoso castello e l'un l'altra si amavano molto. Nacque loro anche una bellissima figlia, a cui diedero il nome Terra. Il Sole e la Luna crescevano amorevolmente la piccola Terra: la cullavano la sera per farla addormentare e ogni sera le cantavano nenie. Vissero felici per molti anni, ma un giorno litigarono.
 
