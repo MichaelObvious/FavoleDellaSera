@@ -1,23 +1,24 @@
 \documentclass[a4paper, 12pt, oneside]{article}
 
 %%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%
-\usepackage[italian]{babel}
+\usepackage[latin]{babel}
 \usepackage{fancyhdr}
 \usepackage{fontspec}
+\usepackage{graphicx}
 \usepackage[hidelinks, bookmarksopen=true, bookmarks=true]{hyperref}
 \usepackage{lettrine}
 \usepackage{microtype}
 \usepackage{titlesec}
 
 %%%%%%%%%%%%%%%% MACROS %%%%%%%%%%%%%%%%
-\newcommand{\booktitle}{\textbf{Favole della sera}}
+\newcommand{\booktitle}{\textbf{%{title}%}}
 
 %%%%%%%%%%%%%%%% PREFERENCES %%%%%%%%%%%%%%%%
 \title{
 	\Huge\booktitle\\
-    {\large\textit{Favole per bambini}}
+    \Large{\textit{%{subtitle}%}}
 }
-\author{} % Michele Palese
+\author{%{author}%} % Michele Palese
 \date{}
 
 %\babelprovide[import]{polytonicgreek}
@@ -28,10 +29,17 @@
 %\babelfont[polytonicgreek]{rm}{BosporosU}
 %\setmainfont{Ubuntu}
 
+\graphicspath{%{img_folders}%}
+
 \pagestyle{fancy}
 \fancyhf{}
 \chead{\booktitle}
 \cfoot{\thepage}
+
+\newenvironment{poetry}
+  %[]
+  {\renewcommand{\arraystretch}{1}\begin{center}\begin{tabular}{l}}
+  {\end{tabular}\end{center}}
 
 \renewcommand{\thesection}{}%\Roman{section}}
 \titleformat{\section} % command 
@@ -46,12 +54,10 @@
 \makeindex
 \begin{document}
 	\maketitle
-	\newpage
-	
-	\tableofcontents
-	\newpage
 
-    %{favole}%
+	%{toc}%
+
+    %{content}%
         
 	
 \end{document}

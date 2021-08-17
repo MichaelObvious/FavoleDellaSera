@@ -26,10 +26,10 @@ def panic(msg):
 ########## CONSTANTS ##########
 
 TEMPLATE_FILE = 'template.tex'
-FABULAE_DIR = './fabulae'
+FABULAE_DIR = './favole'
 DROP_CAP_SIZE = 3
 BUILD_COMMAND = 'xelatex -interaction=nonstopmode %s'
-CONTRIB_FILE = 'contribuerunt.json'
+CONTRIB_FILE = 'contribuirono.json'
 
 ########## TYPES ##########
 
@@ -218,19 +218,19 @@ def build_all():
     files = os.listdir(FABULAE_DIR)
 
     for f in files:
-        if f.endswith(".md"):
+        if f.endswith('.md'):
             fabulae[f.replace('.md', '')] = md_to_tex_source(parse_md_source(slurp_file(f"{FABULAE_DIR}/{f}")))
     # fabulae = list(map(lambda x: x[1], sorted(fabulae.items())))                                   # sort by title
     fabulae = list(sorted(map(lambda x: x[1], fabulae.items()), key=lambda x: len(x.split(' '))))  # sort by length
 
     content = '\n\clearpage'.join(fabulae)
-    doc = Document('Fābulae Vespertīnae',
-        'Fābulae puerīs latīnē scrīptae',
+    doc = Document('Favole della sera',
+        'Favole per grandi e piccini',
         get_authors(json.loads(slurp_file(CONTRIB_FILE))),
         True,
         content,
         [FABULAE_DIR],
-        'FābulaeVespertīnae')
+        'FavoleDellaSera')
 
     build_pdf(doc)
 
