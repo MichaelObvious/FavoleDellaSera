@@ -1,4 +1,4 @@
-> *Fiaba salentina*
+> *Conto salentino*
 
 # Conto della pecorella
 
@@ -6,7 +6,7 @@
 > 
 > *Trascrizione e traduzione a cura di* Pietro Pellizzari
 
-C'era una volta una mamma ed area un figlio. Un giorno la mamma disse al figlio: «Io debbo andare alla fiera; vuoi che t'accatti una pecorella?»
+C'era una volta una mamma ed avea un figlio. Un giorno la mamma disse al figlio: «Io debbo andare alla fiera; vuoi che t'accatti una pecorella?»
 
 «Sì, mamma mia, la voglio.»
 
