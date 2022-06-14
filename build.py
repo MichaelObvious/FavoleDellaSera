@@ -225,7 +225,7 @@ def build_all():
 
     content = '\n\clearpage'.join(fabulae)
     doc = Document('Favole della sera',
-        'Favole per grandi e piccini',
+        'Datemi un soldo di rame, e vi racconterò una favola d\'oro',
         get_authors(json.loads(slurp_file(CONTRIB_FILE))),
         True,
         content,
