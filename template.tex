@@ -1,7 +1,7 @@
-\documentclass[a4paper, 12pt, oneside]{article}
+\documentclass[a5paper, 10pt, oneside]{article}
 
 %%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%
-\usepackage[latin]{babel}
+\usepackage[italian]{babel}
 \usepackage{fancyhdr}
 \usepackage{fontspec}
 \usepackage{graphicx}
@@ -9,15 +9,13 @@
 \usepackage{lettrine}
 \usepackage{microtype}
 \usepackage{titlesec}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
 
 %%%%%%%%%%%%%%%% MACROS %%%%%%%%%%%%%%%%
-\newcommand{\booktitle}{\textbf{%{title}%}}
+\newcommand{\booktitle}{\textsc{%{title}%}}
 
 %%%%%%%%%%%%%%%% PREFERENCES %%%%%%%%%%%%%%%%
-\title{
-	\Huge\booktitle\\
-    \Large{\textit{%{subtitle}%}}
-}
+\title{\booktitle}
 \author{%{author}%} % Michele Palese
 \date{}
 
@@ -28,12 +26,16 @@
 %\setromanfont[BoldFont={Gentium Basic Bold},ItalicFont={Gentium Italic}]{GentiumAlt}
 %\babelfont[polytonicgreek]{rm}{BosporosU}
 %\setmainfont{Ubuntu}
+% \usepackage{GoudyIn}
+\renewcommand\LettrineFontHook{\fontspec{Unicosmo Free}}
 
 \graphicspath{%{img_folders}%}
 
 \pagestyle{fancy}
 \fancyhf{}
-\chead{\booktitle}
+\chead{}%\booktitle}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 \cfoot{\thepage}
 
 \newenvironment{poetry}
@@ -44,7 +46,7 @@
 \renewcommand{\thesection}{}%\Roman{section}}
 \titleformat{\section} % command 
 	[display] % shape
-	{\centering\Large\bfseries} % format
+	{\centering\Large\scshape} % format
 	{\thesection} % label
 {0.5ex} % sep
 {} % before-code
@@ -53,7 +55,27 @@
 %%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%
 \makeindex
 \begin{document}
-	\maketitle
+	\begin{titlepage}
+		\begin{center}
+		\null
+
+		\vfill
+
+		{\Huge\scshape \booktitle}
+
+		\vspace{2ex}
+
+		\Large{\textit{%{subtitle}%}}\\
+
+		\vspace{8ex}
+
+		%{author}%
+
+		\vfill
+
+		\vfill
+		\end{center}
+	\end{titlepage}
 
 	%{toc}%
 

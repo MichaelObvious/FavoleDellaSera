@@ -1,3 +1,4 @@
+#!/bin/python3
 from enum import Enum
 import json
 import os
@@ -27,7 +28,7 @@ def panic(msg):
 
 TEMPLATE_FILE = 'template.tex'
 FABULAE_DIR = './favole'
-DROP_CAP_SIZE = 3
+DROP_CAP_SIZE = 4
 BUILD_COMMAND = 'xelatex -interaction=nonstopmode %s'
 CONTRIB_FILE = 'contribuirono.json'
 
@@ -122,7 +123,11 @@ def md_to_tex_source(parsed: list) -> str:
                 if len(words) > 0:
                     dropcap = words[0][0]
                     dropword = words[0][1:]
-                    content += f'\\lettrine[lines={int(DROP_CAP_SIZE)}, findent=3pt, nindent=0pt]{{{dropcap}}}{{{dropword}}} ' + (' '.join(words[1:]) + '\\\\')
+                    dropword_index = 1
+                    while len(dropword) < 5:
+                        dropword += ' ' + words[dropword_index]
+                        dropword_index += 1
+                    content += f'\\lettrine[lines={int(DROP_CAP_SIZE)}, findent=3pt, nindent=0pt]{{{dropcap}}}{{{dropword}}} ' + (' '.join(words[dropword_index:]) + '\\\\')
                     placed_drop_cap = True
             else:
                 content += f'\\indent {mde.value}\\\\'
@@ -167,7 +172,11 @@ def md_to_tex_document(parsed: list) -> Document:
                 if len(words) > 0:
                     dropcap = words[0][0]
                     dropword = words[0][1:]
-                    content += f'\\lettrine[lines={int(DROP_CAP_SIZE)}, findent=3pt, nindent=0pt]{{{dropcap}}}{{{dropword}}} ' + (' '.join(words[1:]) + '\\\\')
+                    dropword_index = 1
+                    while len(dropword) < 5:
+                        dropword += ' ' + words[dropword_index]
+                        dropword_index += 1
+                    content += f'\\lettrine[lines={int(DROP_CAP_SIZE)}, findent=3pt, nindent=0pt]{{{dropcap}}}{{{dropword}}} ' + (' '.join(words[dropword_index:]) + '\\\\')
                     placed_drop_cap = True
             else:
                 content += f'\\indent {mde.value}\\\\'
@@ -199,6 +208,8 @@ def build_pdf(document: Document):
     
     if document.toc:
         content = content.replace('%{toc}%', '\\newpage\n\\tableofcontents\n\\newpage')
+    else:
+        content = content.replace('%{toc}%', '\\pagenumbering{gobble}')
     content = content.replace('%{content}%', document.contents)
 
     with open(out_file, 'w') as f:
@@ -225,9 +236,9 @@ def build_all():
 
     content = '\n\clearpage'.join(fabulae)
     doc = Document('Favole della sera',
-        'Datemi un soldo di rame, e vi racconterò una favola d\'oro',
+        'Datemi un soldo di rame,\\\\ e vi racconterò una favola d\'oro',
         get_authors(json.loads(slurp_file(CONTRIB_FILE))),
-        True,
+        False,
         content,
         [FABULAE_DIR],
         'FavoleDellaSera')
