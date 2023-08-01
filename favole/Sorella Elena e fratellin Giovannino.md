@@ -30,7 +30,7 @@ Il sole era alto, il pozzo era lontano, il calore sfiancava, il sudore scorreva.
 
 Non appena la sorella si accorse che il suo fratellino non c'era più, si guardò intorno e lo chiamò, ma al suo posto vide solo un capretto che saltellava intorno belando. Lei pianse a lungo abbracciando il bianco capretto, ma le sue lacrime non poterono nulla: il fratellino rimase capretto.
 
-Andò avanti **conducendo** il capretto. Verso sera arrivò al palazzo del re. Aveva paura di entrare nel cortile, perché lì c'erano dei cani rabbiosi. Salì su di un pagliaio, tirò a se il capretto, e si addormentò.
+Andò avanti conducendo il capretto. Verso sera arrivò al palazzo del re. Aveva paura di entrare nel cortile, perché lì c'erano dei cani rabbiosi. Salì su di un pagliaio, tirò a se il capretto, e si addormentò.
 
 La mattina il re, avendo visto che qualcosa giaceva nel pagliaio, mandò delle serve, perché vedessero chi vi era salito sopra. Tornate, le serve dissero al re che sul pagliaio giaceva un giovane fanciulla e che sulle sue ginocchia c'era un capretto. Il re ordinò di condurre la ragazza al proprio cospetto, e le serve la portarono dal re.
 
@@ -52,7 +52,7 @@ Il giorno seguente, il re andò ancora a cacciare, ed Elena rimase sola nel pala
 
 Al crepuscolo Elena si recò al rivo per berne l'acqua. Ma la strega, che era già là ad aspettarla, non appena la vide avvicinarsi al fiume, le si lanciò sopra, le legò una pietra al collo e la gettò nell'acqua. Poi,prese le sembianze di Elena, indossò la sua veste, e tornò al palazzo. Nessuno riconobbe la strega. Il re ritornò, neanche lui la riconobbe. Anzi, si rallegrò molto di vedere la sua cara sposa nuovamente in salute.
 
-Solo al capretto tutto era chiaro. **abbassò** il capo, né beveva, né mangiava. La mattina e la sera andava alla riva, vicino all'acqua, e chiamava: «Elena, sorellina mia!... Vieni, torna alla riva...»
+Solo al capretto tutto era chiaro. Abbassò il capo, né beveva, né mangiava. La mattina e la sera andava alla riva, vicino all'acqua, e chiamava: «Elena, sorellina mia!... Vieni, torna alla riva...»
 
 Quando la strega venne a sapere di ciò, prese e picchiò crudelmente il povero capretto, minacciandolo: «Non appena il re sarà tornato, gli chiederò di mandarti al macello!».
 
